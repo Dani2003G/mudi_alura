@@ -1,30 +1,24 @@
 package br.com.alura.mvc.mudi.mudi.controller;
 
-import br.com.alura.mvc.mudi.model.Pedido;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.Query;
+import br.com.alura.mvc.mudi.repository.PedidoRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import java.util.Arrays;
-import java.util.List;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequiredArgsConstructor
 public class HomeController {
 
-    @PersistenceContext
-    private EntityManager entityManager;
+    private final PedidoRepository pedidoRepository;
 
     @GetMapping("/home")
-    public String home(Model model) {
-        Query query = entityManager.createQuery("SELECT p FROM Pedido p", Pedido.class);
-        List<Pedido> pedidos = query.getResultList();
-
-        model.addAttribute("pedidos", pedidos);
-
-        return "home";
+    public ModelAndView home() {
+        ModelAndView mv = new ModelAndView("home");
+        mv.addObject("pedidos", pedidoRepository.findAll());
+        return mv;
     }
 
 }
