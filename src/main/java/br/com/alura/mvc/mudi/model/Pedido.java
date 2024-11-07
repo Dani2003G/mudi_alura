@@ -1,9 +1,6 @@
 package br.com.alura.mvc.mudi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,8 +22,10 @@ public class Pedido {
 
     private LocalDate dataEntrega;
 
+    @Column(length = 1000)
     private String urlProduto;
 
+    @Column(length = 1000)
     private String urlImagem;
 
     private String descricao;
