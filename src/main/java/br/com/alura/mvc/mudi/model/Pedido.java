@@ -30,4 +30,7 @@ public class Pedido {
 
     private String descricao;
 
+    @Enumerated(EnumType.STRING)
+    private StatusPedido status;
+
 }
