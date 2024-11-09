@@ -11,7 +11,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form th:object="${requisicaoNovoPedidoDTO}" action="/pedido/novo" method="POST">
+            <form th:object="${requisicaoNovoPedidoDTO}" th:action="@{/pedido/novo}" method="POST">
                 <div class="form-group">
                     <label for="nomeProduto">Produto</label>
                     <input th:field="*{nomeProduto}" th:errorclass="is-invalid" class="form-control" placeholder="nome do produto"/>
