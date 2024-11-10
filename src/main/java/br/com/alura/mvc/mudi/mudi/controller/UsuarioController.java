@@ -29,7 +29,7 @@ public class UsuarioController {
     @GetMapping("/pedidos/{status}")
     public ModelAndView porStatus(@PathVariable("status") String status, Principal principal) {
         ModelAndView mv = new ModelAndView("usuario/home");
-        mv.addObject("pedidos", pedidoRepository.findByStatusEusuario(StatusPedido.valueOf(status.toUpperCase()), principal.getName()));
+        mv.addObject("pedidos", pedidoRepository.findByStatusEUsuario(StatusPedido.valueOf(status.toUpperCase()), principal.getName()));
         mv.addObject("status", status);
         return mv;
     }
