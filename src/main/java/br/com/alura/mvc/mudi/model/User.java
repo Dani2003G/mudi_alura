@@ -13,6 +13,7 @@ import java.util.List;
 public class User {
 
     @Id
+    @Column(length = 50)
     private String username;
 
     private String password;
