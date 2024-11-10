@@ -1,4 +1,4 @@
-package br.com.alura.mvc.mudi.model;
+package br.com.alura.mvc.mudi.mudi.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

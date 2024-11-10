@@ -1,7 +1,7 @@
 package br.com.alura.mvc.mudi.mudi.dto;
 
-import br.com.alura.mvc.mudi.model.Pedido;
-import br.com.alura.mvc.mudi.model.StatusPedido;
+import br.com.alura.mvc.mudi.mudi.model.Pedido;
+import br.com.alura.mvc.mudi.mudi.model.StatusPedido;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;

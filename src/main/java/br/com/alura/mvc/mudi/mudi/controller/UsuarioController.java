@@ -1,7 +1,7 @@
 package br.com.alura.mvc.mudi.mudi.controller;
 
-import br.com.alura.mvc.mudi.model.StatusPedido;
-import br.com.alura.mvc.mudi.repository.PedidoRepository;
+import br.com.alura.mvc.mudi.mudi.model.StatusPedido;
+import br.com.alura.mvc.mudi.mudi.repository.PedidoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;

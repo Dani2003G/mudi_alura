@@ -1,10 +1,10 @@
 package br.com.alura.mvc.mudi.mudi.controller;
 
-import br.com.alura.mvc.mudi.model.Pedido;
-import br.com.alura.mvc.mudi.model.User;
+import br.com.alura.mvc.mudi.mudi.model.Pedido;
+import br.com.alura.mvc.mudi.mudi.model.User;
 import br.com.alura.mvc.mudi.mudi.dto.RequisicaoNovoPedidoDTO;
-import br.com.alura.mvc.mudi.repository.PedidoRepository;
-import br.com.alura.mvc.mudi.repository.UserRepository;
+import br.com.alura.mvc.mudi.mudi.repository.PedidoRepository;
+import br.com.alura.mvc.mudi.mudi.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
